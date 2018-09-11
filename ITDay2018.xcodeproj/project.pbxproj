@@ -12,6 +12,7 @@
 		FFE6472121440C990042CDAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE6471F21440C990042CDAF /* Main.storyboard */; };
 		FFE6472321440C9C0042CDAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE6472221440C9C0042CDAF /* Assets.xcassets */; };
 		FFE6472621440C9C0042CDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE6472421440C9C0042CDAF /* LaunchScreen.storyboard */; };
+		FFE6472E214534140042CDAF /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE6472D214534140042CDAF /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FFE6472221440C9C0042CDAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE6472521440C9C0042CDAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFE6472721440C9C0042CDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE6472D214534140042CDAF /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FFE6471B21440C990042CDAF /* AppDelegate.swift */,
 				FFE6471D21440C990042CDAF /* ViewController.swift */,
+				FFE6472D214534140042CDAF /* SpeechRecognizer.swift */,
 				FFE6471F21440C990042CDAF /* Main.storyboard */,
 				FFE6472221440C9C0042CDAF /* Assets.xcassets */,
 				FFE6472421440C9C0042CDAF /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				FFE6471E21440C990042CDAF /* ViewController.swift in Sources */,
 				FFE6471C21440C990042CDAF /* AppDelegate.swift in Sources */,
+				FFE6472E214534140042CDAF /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

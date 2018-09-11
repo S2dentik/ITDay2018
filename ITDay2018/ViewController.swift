@@ -7,19 +7,48 @@
 //
 
 import UIKit
+import Speech
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet var micButton: UIButton!
+    @IBOutlet var textLabel: UILabel!
+
+    var englishSpeechRecognizer: SpeechRecognizer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        englishSpeechRecognizer = SpeechRecognizer(localeIdentifier: "en-US",
+                                                   onRecognized: { self.textLabel.text = $0 })
+
+        englishSpeechRecognizer.requestAuthorizationIfNeeded()
+        textLabel.text = nil
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func toggleRecognizing(_ sender: UIButton) {
+        if englishSpeechRecognizer.isRunning {
+            stopShaking()
+            englishSpeechRecognizer.stop()
+        } else {
+            startShaking()
+            try! englishSpeechRecognizer.start()
+        }
     }
 
+    private func startShaking() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.duration = 0.1
+        animation.autoreverses = true
+        animation.repeatCount = 1_000_000
+        animation.fromValue = Double.pi / 9
+        animation.toValue = -Double.pi / 9
+        micButton.layer.add(animation, forKey: "transform.rotation")
+    }
 
+    private func stopShaking() {
+        micButton.layer.removeAnimation(forKey: "transform.rotation")
+    }
 }
 
